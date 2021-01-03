@@ -16,7 +16,14 @@ Finally, make sure to copy your MuJoCo license key (`mjkey.txt`) to `~/.mujoco/m
 
 ### 2. Python Environment
 
+Add the environment variable in your `~/.bashrc` file: `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/derek/.mujoco/mujoco200/bin`. Then create the conda environment:
 
+```shell
+$ cd ${SOFTLEARNING_PATH}
+$ conda env create -f environment.yml
+$ conda activate softlearning
+$ pip install -e .
+```
 
 ### 3. Experiments
 
