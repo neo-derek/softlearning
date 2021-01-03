@@ -16,6 +16,8 @@ Finally, make sure to copy your MuJoCo license key (`mjkey.txt`) to `~/.mujoco/m
 
 ### 2. Python Environment
 
+`mujoco-py` 2.0.2.9 requires `patchelf`, so first install this package. For Arch Linux, `sudo pacman -S patchelf`; for Ubuntu, `sudo apt install patchelf`.
+
 Add the environment variable in your `~/.bashrc` file: `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/derek/.mujoco/mujoco200/bin`. Then create the conda environment:
 
 ```shell
