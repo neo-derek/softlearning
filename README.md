@@ -1,5 +1,28 @@
 # Softlearning
 
+## Development Environment Setup Record
+
+### 1. Mujoco
+
+```shell
+$ wget https://www.roboti.us/download/mjpro150_linux.zip
+$ wget https://www.roboti.us/download/mujoco200_linux.zip
+$ unzip mjpro150_linux.zip -d ~/.mujoco/
+$ unzip mujoco200_linux.zip -d ~/.mujoco/
+$ ln -s ~/.mujoco/mujoco200_linux ~/.mujoco/mujoco200
+```
+
+Finally, make sure to copy your MuJoCo license key (`mjkey.txt`) to `~/.mujoco/mjkey.txt`.
+
+### 2. Python Environment
+
+
+
+### 3. Experiments
+
+1. SAC on HalfCheetah-v3
+2. SAC on Hopper-v1
+
 Softlearning is a deep reinforcement learning toolbox for training maximum entropy policies in continuous domains. The implementation is fairly thin and primarily optimized for our own development purposes. It utilizes the tf.keras modules for most of the model classes (e.g. policies and value functions). We use Ray for the experiment orchestration. Ray Tune and Autoscaler implement several neat features that enable us to seamlessly run the same experiment scripts that we use for local prototyping to launch large-scale experiments on any chosen cloud service (e.g. GCP or AWS), and intelligently parallelize and distribute training for effective resource allocation.
 
 This implementation uses Tensorflow. For a PyTorch implementation of soft actor-critic, take a look at [rlkit](https://github.com/vitchyr/rlkit).
